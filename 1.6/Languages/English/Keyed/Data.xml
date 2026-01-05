@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <ContentFinderOptimizer.ModName>ContentFinder Optimizer</ContentFinderOptimizer.ModName>
+    <ContentFinderOptimizer.EnableDesc>Enable/Disable the mod by skipping the code in the Harmony patches. Restart is NOT required. (Note: This does not fully disable the Harmony patches, disable the mod to do that.)</ContentFinderOptimizer.EnableDesc>
+    <ContentFinderOptimizer.Enabled>Enabled</ContentFinderOptimizer.Enabled>
+    <ContentFinderOptimizer.Label>Tick Lifetime (60 Ticks = 1 Second)</ContentFinderOptimizer.Label>
+    <ContentFinderOptimizer.SubLabel>The number of ticks before a texture is removed from the cache. Restart is NOT required!</ContentFinderOptimizer.SubLabel>
+</LanguageData>
