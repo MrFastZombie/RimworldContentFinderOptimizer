@@ -1,6 +1,6 @@
 # Rimworld ContentFinder Optimizer
 
-This is an experimental patch for the ContentFinder\<Texture2d>.Get() method in Rimworld.
+This is an experimental patch for the ContentFinder\<Texture2d>.Get() method in Rimworld 1.6.
 
 ## Why?
 
