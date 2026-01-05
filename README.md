@@ -1,4 +1,4 @@
-# Rimworld ContentFinder Optmiezr
+# Rimworld ContentFinder Optimizer
 
 This is an experimental patch for the ContentFinder\<Texture2d>.Get() method in Rimworld.
 
@@ -36,6 +36,12 @@ Once it downloads, press `Refresh` near the bottom to make the mod show in the l
 You can update the mod by right clicking it and selected `Miscellaneous options -> Update mod with git`.
 
 You may get a warning that this mod lacks a publish field ID. If this happens, select the mod and press add to ignore list.
+
+## Settings
+
+This mod has a configuration menu in-game. Go to `Options -> Mod settings` and search for this mod.
+
+You can enable/disable the functionality of this mod and change how long the cache keeps items without restarting or reloading a save.
 
 ## Does it work?
 
