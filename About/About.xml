@@ -25,4 +25,5 @@
 	</incompatibleWith>
 
 	<description>Adds a cache to ContentFinder.Get() to improve performance with large modlists.</description>
+	<modVersion>1.0</modVersion>
 </ModMetaData>
