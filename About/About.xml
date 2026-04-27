@@ -20,10 +20,14 @@
 	<loadAfter>
 	</loadAfter>
 
+	<loadBefore>
+		<li>vr.missilegirl</li>
+	</loadBefore>
+
 	<incompatibleWith>
 		<!-- <li>username.modname</li> -->
 	</incompatibleWith>
 
-	<description>Adds a cache to ContentFinder.Get() to improve performance with large modlists.</description>
-	<modVersion>1.0</modVersion>
+	<description>Adds a cache to ContentFinder.Get() to improve performance with large modlists. Put this near the bottom of your mod list!</description>
+	<modVersion>1.1</modVersion>
 </ModMetaData>
