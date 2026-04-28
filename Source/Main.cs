@@ -7,7 +7,7 @@ using RimWorld;
 using System.Reflection;
 using HarmonyLib;
 
-namespace HARCheckMaskShaderPatch
+namespace ContentFinderPatch
 {
     public class ContentFinderOptimizerSettings : ModSettings
     {
@@ -63,6 +63,7 @@ namespace HARCheckMaskShaderPatch
     
     [HarmonyPatch(typeof(Verse.ContentFinder<Texture2D>), "Get", new Type[] {typeof(string), typeof(bool)})]
     public static class CheckMaskShader_Patch
+    public static class ContentFinder_Patch
     {
         private static Dictionary<string, Texture2D> textureCache = new Dictionary<string, Texture2D>();
         private static Dictionary<string, int> textureTick = new Dictionary<string, int>();
