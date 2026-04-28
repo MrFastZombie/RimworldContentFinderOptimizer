@@ -27,15 +27,21 @@ Default folder locations (Info taken from <https://rimworldwiki.com/wiki/Modding
 
 Note that these locations may be different depending on whether you used a Steam library on another drive, used GOG or changed the GOG install directory.
 
+In-game, open the mod menu and move the mod to the right pane. Make sure the mod loads towards the end of your mod list.
+
 ### Rimsort (Recommended!)
 
 In Rimsort's top bar, select `Download -> Add Git Mod` and put the URL of this repository in the text prompt that comes up.
 
-Once it downloads, press `Refresh` near the bottom to make the mod show in the left pane and drag it to the right pane.
+Once it downloads, press `Refresh` near the bottom to make the mod show in the left pane and drag it to the right pane, near the bottom of your mod list. Then click `Save` near the bottom.
 
-You can update the mod by right clicking it and selected `Miscellaneous options -> Update mod with git`.
+You can update the mod by right clicking it and selecting `Miscellaneous options -> Update mod with git`.
 
 You may get a warning that this mod lacks a publish field ID. If this happens, select the mod and press add to ignore list.
+
+## Important note for ALL users
+
+Load this mod towards the **bottom** of your mod list, but not after other load last mods *(Missile Girl for example)* unless you know it'll solve an issue.
 
 ## Settings
 
