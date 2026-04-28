@@ -58,24 +58,34 @@ namespace ContentFinderPatch
 
             Harmony harmony = new Harmony("ContentFinder Optimizer");
             harmony.PatchAll( Assembly.GetExecutingAssembly() );
+
+            // DEBUG
+            //var original = typeof(ContentFinder<Texture2D>).GetMethod("Get");
+            //var patches = Harmony.GetPatchInfo(original);
+            //Log.Message("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Patch owners: " + patches.Owners.Join() + " !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ");
         }
     }
     
-    [HarmonyPatch(typeof(Verse.ContentFinder<Texture2D>), "Get", new Type[] {typeof(string), typeof(bool)})]
-    public static class CheckMaskShader_Patch
+    [HarmonyPatch(typeof(ContentFinder<Texture2D>), "Get")]
     public static class ContentFinder_Patch
     {
         private static Dictionary<string, Texture2D> textureCache = new Dictionary<string, Texture2D>();
         private static Dictionary<string, int> textureTick = new Dictionary<string, int>();
-
-        public static bool Prefix(ref Texture2D __result, ref string itemPath, ref bool reportFailure)
+        
+        public static bool Prefix(MethodBase __originalMethod, ref Texture2D __result, ref string itemPath, ref bool reportFailure)
         {
             int tick = GenTicks.TicksGame;
             int tickLimit = LoadedModManager.GetMod<ContentFinderOptimizerMod>().GetSettings<ContentFinderOptimizerSettings>().tickLifetime;
             bool enabled = LoadedModManager.GetMod<ContentFinderOptimizerMod>().GetSettings<ContentFinderOptimizerSettings>().enabled;
-            
+
             if(enabled == false) return true;
-            
+
+            //Log.Message("Running Patched method on " + itemPath);
+
+            //if(__originalMethod.DeclaringType.GetGenericArguments()[0].ToString().Contains("Texture2D") == true) Log.Message("Patching type: " + __originalMethod.DeclaringType.GetGenericArguments()[0]);
+
+            if(__originalMethod.DeclaringType.GetGenericArguments()[0].ToString().Contains("Texture2D") == false) return true; //This will hopefully catch when it tries to patch the wrong calls.
+
             if(textureCache.ContainsKey(itemPath))
             {
                 if(textureTick.ContainsKey(itemPath))
