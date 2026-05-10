@@ -8,7 +8,11 @@ In my modlist (over 1000 mods), anything that calls ContentFinder\<Texture2d>.Ge
 
 ## Should I use this?
 
-I don't expect many issues with using this mod, but I do not have a comprehensive understanding of the game's code so I will not make gurantees. In testing, I have found no issues.
+I don't expect many issues with using this mod, but I do not have a comprehensive understanding of the game's code so I will not make gurantees. This mod can cause issues with sound not loading but only when some incompatible mods are loaded. So far the only confirmed case of this is with Faster Game Loading - Continued.
+
+## Incompatibilities
+
+* [Faster Game Loading - Continued](https://steamcommunity.com/sharedfiles/filedetails/?id=3652938473): Many sounds will fail to load. See issue #1 for more info.
 
 ## Installation
 
