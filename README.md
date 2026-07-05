@@ -20,7 +20,7 @@ Theoretically, this mod shouldn't work with its current implementation. This mod
 
 ## Installation
 
-Please read [Should I use this?](#should-I-use-this?) before continuing if you have not already.
+Please read [Should I use this?](#should-i-use-this) before continuing if you have not already.
 
 ### Manual
 
