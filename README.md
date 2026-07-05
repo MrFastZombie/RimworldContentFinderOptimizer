@@ -8,6 +8,10 @@ In my modlist (over 1000 mods), anything that calls ContentFinder\<Texture2d>.Ge
 
 ## Should I use this?
 
+Firstly, I recommend checking out [Yet Another Optimizer](https://steamcommunity.com/sharedfiles/filedetails/?id=3718308218) first, which has its own texture caching system that I believe is more robust than mine.
+
+If YaOpt does not work for you, then trying my mod may help but you should make sure it works instead of just installing it and forgetting. If you decide to use my mod, please do read the next paragraph!
+
 Theoretically, this mod shouldn't work with its current implementation. This mod patches a static method in a generic class which is unsupported by Harmony and could be issue prone. With the information I've found, it should break non-Texture2D retrievals, which I'd expect would break many shaders and sounds in the game. However, in my heavily modded game it works fine. So far the only confirmed case of issues is with Faster Game Loading - Continued. My advice is to try it out, but if you have issues with sounds or shaders I probably can't fix them unless I take a whole new approach to this optimization. There shouldn't be any risk of this breaking your saves, but you should still back up your saves just to be safe.
 
 ## Incompatibilities
@@ -15,6 +19,8 @@ Theoretically, this mod shouldn't work with its current implementation. This mod
 * [Faster Game Loading - Continued](https://steamcommunity.com/sharedfiles/filedetails/?id=3652938473): Many sounds will fail to load. See issue #1 for more info.
 
 ## Installation
+
+Please read [Should I use this?](#should-I-use-this?) before continuing if you have not already.
 
 ### Manual
 
