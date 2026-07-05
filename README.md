@@ -1,4 +1,6 @@
-# Rimworld ContentFinder Optimizer
+# YOU SHOULD NOT USE THIS ONE, THERE IS AN ALTERNATIVE LINKED BELOW!
+
+## Rimworld ContentFinder Optimizer
 
 This is an experimental patch for the ContentFinder\<Texture2d>.Get() method in Rimworld 1.6.
 
@@ -8,7 +10,9 @@ In my modlist (over 1000 mods), anything that calls ContentFinder\<Texture2d>.Ge
 
 ## Should I use this?
 
-Theoretically, this mod shouldn't work with its current implementation. This mod patches a static method in a generic class which is unsupported by Harmony and could be issue prone. With the information I've found, it should break non-Texture2D retrievals, which I'd expect would break many shaders and sounds in the game. However, in my heavily modded game it works fine. So far the only confirmed case of issues is with Faster Game Loading - Continued. My advice is to try it out, but if you have issues with sounds or shaders I probably can't fix them unless I take a whole new approach to this optimization. There shouldn't be any risk of this breaking your saves, but you should still back up your saves just to be safe.
+No, [there's a better mod on Dub's mods discord](https://discord.com/channels/241677926855081984/930805650676649994/1494802458277580981). (Sorry for making you join a discord.)
+
+Theoretically, this mod shouldn't work with its current implementation. This mod patches a static method in a generic class which is unsupported by Harmony and could be issue prone. With the information I've found, I expect it should break non-Texture2D retrievals, which would cause audio and shaders to fail to load. However, in my heavily modded game it works fine. So far the only confirmed case of issues is with Faster Game Loading - Continued. If you have issues with sounds or shaders I probably can't fix them unless I take a whole new approach to this optimization, which I probably won't do as the mod linked above works better.
 
 ## Incompatibilities
 
